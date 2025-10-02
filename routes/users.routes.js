@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { login, register, verifyOtp } from "../controllers/users.controller.js";
 
-const userRoute = Router();
+const userRouter = Router();
 
 /**
  * @swagger
@@ -40,7 +40,7 @@ const userRoute = Router();
  *       403:
  *         description: "Email already exists"
  */
-userRoute.post("/register", register);
+userRouter.post("/register", register);
 
 /**
  * @swagger
@@ -71,7 +71,7 @@ userRoute.post("/register", register);
  *       403:
  *         description: "Wrong OTP Code"
  */
-userRoute.post("/verify-otp", verifyOtp);
+userRouter.post("/verify-otp", verifyOtp);
 
 /**
  * @swagger
@@ -103,6 +103,6 @@ userRoute.post("/verify-otp", verifyOtp);
  *       403:
  *         description: "Email address or password wrong"
  */
-userRoute.post("/login", login);
+userRouter.post("/login", login);
 
-export default userRoute;
+export default userRouter;

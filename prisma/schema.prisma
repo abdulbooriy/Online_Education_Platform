@@ -32,7 +32,7 @@ model Courses {
   price         Decimal       @db.Decimal(10, 2)
   created_at    DateTime      @default(now())
   instructor_id String
-  instuctor     Users         @relation(fields: [instructor_id], references: [id])
+  instructor    Users         @relation(fields: [instructor_id], references: [id])
   Enrollments   Enrollments[]
 }
 
