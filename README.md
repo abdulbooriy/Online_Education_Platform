@@ -230,7 +230,7 @@ ISC
 
 ## Author
 
-[Your Name]
+Abdulboriy Mahamatjanov
 
 ---
 
